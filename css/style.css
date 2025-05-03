@@ -1,0 +1,722 @@
+
+/*========== General ==============================================================================*/
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+body {
+	min-width: 320px;
+	height: 100%;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 189%;
+	color: #000;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: 100%;
+	max-width: 1280px;
+	padding: 0 10px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+
+/*========== General ==============================================================================*/
+
+/*========= Header ============================================================================*/
+
+.header {
+	padding-top: 20px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-list {
+	display: flex;
+	gap: 0 40px;
+	padding-top: 20px;
+}
+
+/*========= Header ============================================================================*/
+
+/*====== Hero ===================================================================================*/
+
+.hero {
+	margin-bottom: 70px;
+}
+
+.content {
+	margin: auto;
+	width: 100%;
+	max-width: 1920px;
+	position: relative;
+}
+
+.slick-slide .image {
+	padding: 0;
+}
+
+.slick-slide img {
+	display: block;
+	width: 100%;
+}
+
+.slick-slide img.slick-loading {
+	border: 0;
+}
+
+.card {
+	width: 624px;
+	height: 369px;
+	background-image: url('../images/icons/bg_yellow.svg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 215px;
+	bottom: 0px;
+}
+
+.card__inner {
+	padding: 70px 0px 0px 70px;
+	margin-bottom: 25px;
+	line-height: 1.3;
+}
+
+.card__text {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 35px;
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.card__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 19px 50px;
+	width: 272px;
+	height: 78px;
+	background-color: #000;
+	margin-left: 70px;
+	transition: all .3s;
+}
+
+.card__btn:hover {
+	transform: scale(1.2);
+}
+
+.card__btn span {
+	font-family: "Roboto", sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: #f8f200;
+}
+/*====== Hero ===================================================================================*/
+
+/*==== Night-city ===============================================================================*/
+
+.night-city {
+	margin-bottom: 70px;
+}
+
+.night-city__box {
+	margin-bottom: 70px;
+}
+
+.night-city__title {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 35px;
+	font-weight: 400;
+	color: #000;
+	margin-bottom: 15px;
+}
+
+.night-city__text {
+	font-weight: 400;
+	color: #777;
+}
+
+.night-city__selected {
+	font-weight: 700;
+	color: #52bedc;
+}
+
+.container-grid {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-auto-flow: column dense;
+	grid-template-columns: repeat(auto-fit, 2, auto);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:
+		"night-city-1 night-city-3"
+		"night-city-2 night-city-3";
+	gap: 32px;
+	width: 100%;
+}
+
+.night-city__box-img img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	transition: 0.8s;
+}
+
+.night-city__box-img img:hover {
+	transform: rotate(-5deg) scale(1);
+}
+
+.img-1 {
+	grid-area: night-city-1;
+}
+
+.img-2 {
+	grid-area: night-city-2;
+}
+
+.img-3 {
+	grid-area: night-city-3;
+}
+
+
+/*==== Night-city ===============================================================================*/
+
+/*==== Play ===============================================================================*/
+
+.play {
+	background-color: #000;
+}
+
+.bg-top {
+	max-width: 1920px;
+	height: 70px;
+	background-image: url('../images/play_bg_top.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.play__box__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 15px;
+	margin-bottom: 35px;
+}
+
+.play__box-title {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.play__promotion {
+	width: 132px;
+	height: 132px;
+	background-image: url('../images/icons/promotion.svg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: all 1s;
+}
+
+.play__promotion:hover {
+	transform: rotate(360deg) scale(1);
+}
+.play__title {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 35px;
+	font-weight: 400;
+	color: #fff;
+}
+
+
+
+.play__text {
+	max-width: 952px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 189%;
+	color: #fff;
+	padding-top: 39px;
+	padding-bottom: 25px;
+}
+
+.blue-text {
+	font-weight: 700;
+	color: #52bedc;
+}
+
+.play__box-inner {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 70px;
+	gap: 0 32px;
+}
+
+.play__form {
+	width: 100%;
+	max-width: 460px;
+	max-height: 383px;
+}
+
+.play__box-input {
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+.play__input-text {
+	display: block;
+	width: 100%;
+	height: 35px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #777;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	padding-bottom: 13px;
+}
+
+.play__input-text::placeholder {
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+}
+
+.play__input-email {
+	display: block;
+	width: 100%;
+	height: 35px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #777;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	padding-bottom: 13px;
+}
+
+.play__input-email::placeholder {
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+}
+
+.play__input-wrapper {
+	width: 100%;
+	position: relative;
+	margin: 15px 0;
+	text-align: center;
+	border: 1px dashed #777;
+	height: 120px;
+}
+
+.play__input-file {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.play__label-file {
+	width: 100%;
+	max-width: 186px;
+	height: 42px;
+	font-weight: 300;
+	font-size: 18px;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	color: #fff;
+	margin-top: 39px;
+	margin-bottom: 39px;
+}
+
+.play__label-file-text {
+	line-height: 189%;
+}
+
+.play__button {
+	width: 192px;
+	height: 59px;
+	padding: 15px 50px;
+	background: #f8f200;
+	font-weight: 700;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 15px;
+}
+
+.play__checkbox-label {
+	font-size: 12px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.play__checkbox-label input {
+	display: none;
+}
+
+.play__checkbox-label span {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #777;
+	display: inline-block;
+	position: relative;
+	padding: 10px;
+}
+
+[type=checkbox]:checked + span:before {
+	content: '\2714';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	font-size: 23px;
+	color: #f8f200;
+}
+
+.play__box-checkbox {
+	margin-bottom: 0;
+}
+
+.play__box-image {
+	max-width: 788px;
+	max-height: 456px;
+}
+
+.play__img {
+	width: 100%;
+	object-fit: contain;
+}
+
+.bg-bottom {
+	max-width: 1920px;
+	height: 70px;
+	background-image: url('../images/play_bg_bottom.webp');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*==== Play ===============================================================================*/
+
+/*======= Immersion =============================================================================*/
+
+.immersion {
+	background-color: #f8f200;
+	padding-bottom: 40px;
+}
+
+.immersion__wrapper {
+	display: flex;
+	gap: 32px;
+	margin-top: 70px;
+	margin-bottom: 40px;
+}
+
+.immersion__block-left {
+	width: 100%;
+	max-width: 624px;
+	max-height: 526px;
+}
+
+.immersion__img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	padding-bottom: 25px;
+}
+
+.immersion__box-logo {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	padding-left: 40px;
+}
+
+.immersion__block-right {
+	width: 100%;
+	max-width: 624px;
+	max-height: 526px;
+}
+
+.immersion__title {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 35px;
+	font-weight: 400;
+	color: #000;
+	line-height: 163%;
+	padding-bottom: 25px;
+}
+
+.immersion__description {
+	padding-bottom: 25px;
+}
+
+.immersion__text {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 189%;
+	color: #000;
+}
+
+.immersion__list {
+	font-size: 18px;
+	font-weight: 400;
+	color: #000;
+	padding-bottom: 40px;
+}
+
+.immersion__item-one {
+	background: url('../images/icons/color_lens.svg') no-repeat 0 50%;
+	padding-left: 40px;
+	padding-bottom: 15px;
+}
+.immersion__item-two {
+	background: url('../images/icons/auto_awesome.svg') no-repeat 0 50%;
+	padding-left: 40px;
+	padding-bottom: 15px;
+}
+.immersion__item-three {
+	background: url('../images/icons/auto_awesome_motion.svg') no-repeat 0 50%;
+	padding-left: 40px;
+	padding-bottom: 0;
+}
+
+.immersion__btn {
+	display: inline-block;
+	padding: 15px 50px;
+	background-color: #000;
+	font-size: 18px;
+	font-weight: 700;
+	color: #f8f200;
+	text-align: center;
+	margin-left: 16px;
+	transition: all .3s;
+}
+
+.immersion__btn:hover {
+	transform: scale(1.2);
+}
+
+/*======= Immersion =============================================================================*/
+
+/* ============= Purchase ======================================================================*/
+
+.purchase__wrapper {
+	display: flex;
+}
+
+.purchase__block-left {
+	width: 100%;
+	max-width: 944px;
+	max-height: 717px;
+}
+
+.purchase__img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.purchase__block-right {
+	width: 100%;
+	max-width: 976px;
+	max-height: 717px;
+	background-color: #000;
+}
+
+.purchase__content {
+	width: 100%;
+	max-width: 624px;
+	max-height: 647px;
+	margin-top: 70px;
+	padding-left: 32px;
+	margin-bottom: 70px;
+}
+
+.purchase__title {
+	font-family: "Press Start 2P", system-ui;
+	font-size: 35px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 163%;
+	padding-bottom: 25px;
+}
+
+.purchase__list {
+	padding-bottom: 70px;
+}
+
+.purchase__item-1 {
+	font-size: 24px;
+	font-weight: 700;
+	color: #52bedc;
+	padding-bottom: 15px;
+}
+
+.purchase__item-2 {
+	background: url('../images/icons/disk.svg') no-repeat 0 50%;
+	padding-left: 40px;
+	padding-bottom: 15px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.purchase__item-3 {
+	background: url('../images/icons/wysiwyg.svg') no-repeat 0 50%;
+	padding-left: 40px;
+	padding-bottom: 15px;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.purchase__item-4 {
+	background: url('../images/icons/collections.svg') no-repeat 0 50%;
+	padding-left: 40px;
+	padding-bottom: 0;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.purchase__text {
+	font-size: 24px;
+	font-weight: 700;
+	color: #52bedc;
+	padding-bottom: 15px;
+}
+
+.purchase__games-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 80px;
+}
+
+.purchase__pc {
+	width: 62px;
+	height: 36px;
+	display: block;
+	object-fit: cover;
+	margin-bottom: 50px;
+}
+
+.purchase__xbox {
+	width: 178px;
+	height: 36px;
+	display: block;
+	object-fit: cover;
+	margin-bottom: 50px;
+}
+
+.purchase__stadia {
+	width: 58px;
+	height: 51px;
+	display: block;
+	object-fit: cover;
+}
+
+.purchase__playstation {
+	width: 168px;
+	height: 36px;
+	display: block;
+	object-fit: cover;
+}
+
+/* ============= Purchase ======================================================================*/
+
+/* ========== Footer =========================================================================*/
+
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.footer__block-left {
+	display: flex;
+	gap: 32px;
+}
+
+.footer__block-right {
+	display: flex;
+	gap: 32px;
+}
+
+.footer__license {
+	font-size: 18px;
+	font-weight: 400;
+	color: #000;
+}
+
+.footer__confidentially {
+	font-size: 18px;
+	font-weight: 400;
+	color: #000;
+}
+
+.footer__info {
+	background-color: #000;
+	font-size: 12px;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/*========== Footer =================================================================================*/
